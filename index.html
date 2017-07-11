@@ -29,44 +29,47 @@
 			 	    </button>
 
 				    <a class="navbar-brand">
-				        App Name
+				        Exchange Market
 				    </a>
 		        </div>
-		        <div style="float: right;" class="collapse navbar-collapse" id="navigation">
+		        <div style="float: right ! important;" class="collapse navbar-collapse" id="navigation">
 		    	    <ul class="navbar-nav">
 		                <li class="nav-item">
 		                    <a ui-sref="dashboard" class="nav-link">
-					    		<i class="ion-ios-home"></i>Home
+					    		<i class="ion-ios-home"></i> &nbsp;Home
 					    	</a>
 		                </li>
-		    	    	<li class="nav-item">
-					    	<a ui-sref="myaccount" class="nav-link">
-					    		<i class="ion-person"></i>My Profile
-					    	</a>
-					    </li>
-					    <li class="nav-item">
-					    	<a ui-sref="checkout" class="nav-link">
-					    		<i class="ion-bag"></i>Checkout
-					    	</a>
-					    </li>
 		                <li class="nav-item">
 		                	<a ui-sref="addproducts" class="nav-link">
-		                		<i class="ion-plus-circled"></i>Products
+		                		<i class="ion-plus-circled"></i> &nbsp;Products
 		                	</a>
 		                </li>
-					    <li class="nav-item">
-					    	<a ui-sref="myproducts" class="nav-link">
-					    		<i class="ion-plus-circled"></i>My Products
+		                <li class="nav-item">
+		                	<a ui-sref="addproducts" class="nav-link">
+		                		<i class="ion-search"></i> &nbsp;AGGREGATOR
+		                	</a>
+		                </li>
+		                <li class="nav-item">
+					    	<a ui-sref="checkout" class="nav-link">
+					    		<i class="ion-bag"></i> &nbsp;Cart
 					    	</a>
 					    </li>
-					    <li class="nav-item">
-					    	<a ui-sref="orders" class="nav-link">
-					    		<i class="ion-card"></i>Orders
-					    	</a>
-					    </li>
+					    <li class="dropdown nav-item">
+						    <a href="#" class="btn btn-default dropdown-toggle" target="_self" data-toggle="dropdown" id="navbarDropdownMenuLink1">
+						    	<i class="ion-person"></i> &nbsp;My Account
+						    </a>
+						    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+						        <a class="dropdown-item nav-link" href="#"><i class="ion-ios-pricetag"></i> &nbsp;My Products</a>
+						        <a class="dropdown-item nav-link" href="#"><i class="ion-plus"></i> &nbsp;Add Product</a>
+						        <a class="dropdown-item nav-link" href="#"><i class="ion-card"></i> &nbsp;Orders</a>
+						        <a class="dropdown-item nav-link" href="#"><i class="ion-cash"></i> &nbsp;Transactions</a>
+						        <a class="dropdown-item nav-link" href="#"><i class="ion-person"></i> &nbsp;Profile</a>
+						        <div class="dropdown-divider"></div>
+						    </ul>
+						</li>
 					    <li class="nav-item">
 					    	<a ui-sref="login" class="nav-link">
-					    		<i class="ion-log-in"></i>Login
+					    		<i class="ion-log-in"></i> &nbsp;Login
 					    	</a>
 					    </li>
 		            </ul>
@@ -75,16 +78,9 @@
 		</nav>
 	    		
 
-	    <div class="wrapper">
-		 	<div ui-view></div>
-	    </div>
-
-	    <li class="nav-item">
-	    	<a ui-sref="result" class="nav-link">
-	    		Result
-	    	</a>
-	    </li>
-
+	    
+		 	<div ui-view style="width: 100%;padding: 1%;"></div>
+	   
 		<!-- SCRIPTS -->
 
 		<!-- Angular Js -->

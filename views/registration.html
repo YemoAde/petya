@@ -2,23 +2,18 @@
 	<div class="">
 		<form class="form" method="" action="">
 	        <div class="content">
-	            <div class="col-md-12">
+	        	
+	            <div class="col-md-10 col-md-offset-1">
+	            	<h4 align="center">Register</h4>
 				    <div class="input-group form-group-no-border">
 				        <span class="input-group-addon">
 				            <i class="ion-person"></i>
 				        </span>
-				        <input type="text" class="form-control" placeholder="Firstname">
+				        <input type="text" class="form-control" placeholder="Fullname">
 				    </div>
 				</div>
-	            <div class="col-md-12">
-				    <div class="input-group form-group-no-border">
-				        <span class="input-group-addon">
-				            <i class="ion-person"></i>
-				        </span>
-				        <input type="text" class="form-control" placeholder="Lastname">
-				    </div>
-				</div>
-				<div class="col-md-6">
+				
+				<div class="col-md-10 col-md-offset-1">
 				    <div class="input-group form-group-no-border">
 				        <span class="input-group-addon">
 				            <i class="ion-locked"></i>
@@ -26,15 +21,7 @@
 				        <input type="password" class="form-control" placeholder="Password">
 				    </div>
 				</div>
-				<div class="col-md-6">
-				    <div class="input-group form-group-no-border">
-				        <span class="input-group-addon">
-				            <i class="ion-locked"></i>
-				        </span>
-				        <input type="password" class="form-control" placeholder="Confirm Password">
-				    </div>
-				</div>
-				<div class="col-md-12">
+				<div class="col-md-10 col-md-offset-1">
 				    <div class="input-group form-group-no-border">
 				        <span class="input-group-addon">
 				            <i class="ion-ios-home"></i>
@@ -42,49 +29,38 @@
 				        <input type="text" class="form-control" placeholder="Address">
 				    </div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-10 col-md-offset-1">
 				    <div class="input-group form-group-no-border">
 				        <span class="input-group-addon">
 				            <i class="ion-ios-email"></i>
 				        </span>
-				        <input type="email" class="form-control" placeholder="email">
+				        <input type="email" class="form-control" placeholder="Email">
 				    </div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-10 col-md-offset-1">
 				    <div class="input-group form-group-no-border">
 				        <span class="input-group-addon">
-				            <i class="ion-ios-telephone"></i>
+				            <i class="ion-ios-telephone"></i> 
 				        </span>
 				        <input type="text" class="form-control" placeholder="Phone Number">
 				    </div>
 				</div>
-				<div align="center" class="radio">
-					<h6>Are you a </h6>
-				    <input type="radio" name="radio1" id="radio1" value="option1" checked="">
-				    <label for="radio1">
-				        Buyer
-				    </label>
-				    <h6>or a</h6>
-				    <input type="radio" name="radio1" id="radio2" value="option2">
-				    <label for="radio2">
-				        Seller
-				    </label>
+				<div class="col-md-10 col-md-offset-1">
+					<label class="help-block">Please Select a User Type Buyer or Producer</label>
+				    <div class="input-group form-group-no-border">
+				        <select class="form-control" value="">
+				        	<option value="" selected disabled>Please Select One</option>
+				        	<option value="Seller">Seller</option>
+				        	<option value="Buyer">Buyer</option>
+				        </select>
+				    </div>
 				</div>
 	        </div>
-	        <div class="col-sm-4">
-	            <h6>
-	            	<a ui-sref="login" class="link">Login</a>
-	            </h6>
-	        </div>
+	        
 	        <div align="center" class="col-sm-4">
 	            <div class="footer text-center">
 	            	<input type="submit" name="submit" class="btn btn-primary btn-round btn-block">
 	        	</div>
-	        </div>
-	        <div class="col-sm-4">
-	            <h6>
-	                <a href="#" class="link">Need Help?</a>
-	            </h6>
 	        </div>
 	    </form>           
 	</div>

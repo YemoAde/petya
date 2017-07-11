@@ -3,6 +3,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise("/dashboard");
   // Now set up the states
   $stateProvider
+
+    // login route
+    .state('login', {
+      url: "/login",
+      templateUrl: "views/login.html"
+    })
+
+    // register route
+    .state('register', {
+      url: "/register",
+      templateUrl: "views/registration.html"
+    })
+
+
     .state('addproducts', {
       url: "/addproducts",
       templateUrl: "views/addproducts.html"
@@ -15,10 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/dashboard",
       templateUrl: "views/dashboard.html"
     })
-    .state('login', {
-      url: "/login",
-      templateUrl: "views/login.html"
-    })
+    
     .state('myaccount', {
       url: "/myaccount",
       templateUrl: "views/myaccount.html"
