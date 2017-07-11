@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html>
-	<head>
+	<head lang="en">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Virtual Market</title>
+		<!-- Font Awesome -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+	    <!-- Icons -->
+	    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	    <!-- Bootstrap core CSS -->
-		<link rel="stylesheet" type="text/css" href="assets/mdb free/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 		<!-- Material Design Bootstrap -->
-		<link rel="stylesheet" type="text/css" href="assets/mdb free/css/mdb.min.css">
-		<!-- Material Design Icons -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    <!-- Font Awesome -->
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/ui kit/css/now-ui-kit.css">
 	    <!-- Style Css -->
 	    <link href="css/style.css" rel="stylesheet">
 
 	</head>
-	<body ng-app="virtualmarket">
+	<body ng-app="virtualmarket" class="index-page">
 
+		
 
+	    <nav class="navbar navbar-toggleable-md bg-default">
+		    <div class="container">
+		        <div class="navbar-translate">
+		            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			   	        <span class="navbar-toggler-bar bar1"></span>
+				        <span class="navbar-toggler-bar bar2"></span>
+				        <span class="navbar-toggler-bar bar3"></span>
+			 	    </button>
 
-		<a ui-sref="addproducts" class="btn btn-primary">Add Products</a>
-	    <a ui-sref="checkout" class="btn btn-primary">Checkout</a>
-	    <a ui-sref="dashboard" class="btn btn-primary">Dashboard</a>
-	    <a ui-sref="login" class="btn btn-primary">Login</a>
-	    <a ui-sref="myaccount" class="btn btn-primary">My Account</a>
-	    <a ui-sref="myorders" class="btn btn-primary">My orders</a>
-	    <a ui-sref="myproducts" class="btn btn-primary">My Products</a>
-	    <a ui-sref="orders" class="btn btn-primary">Orders</a>
-	    <a ui-sref="registration" class="btn btn-primary">Registration</a>
-	    <a ui-sref="result" class="btn btn-primary">Result</a>
+				    <a class="navbar-brand">
+				        App Name
+				    </a>
+		        </div>
+		        <div style="float: right;" class="collapse navbar-collapse" id="navigation">
+		    	    <ul class="navbar-nav">
+		                <li class="nav-item">
+		                    <a ui-sref="dashboard" class="nav-link">
+					    		<i class="ion-ios-home"></i>Home
+					    	</a>
+		                </li>
+		    	    	<li class="nav-item">
+					    	<a ui-sref="myaccount" class="nav-link">
+					    		<i class="ion-person"></i>My Profile
+					    	</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a ui-sref="checkout" class="nav-link">
+					    		<i class="ion-bag"></i>Checkout
+					    	</a>
+					    </li>
+		                <li class="nav-item">
+		                	<a ui-sref="addproducts" class="nav-link">
+		                		<i class="ion-plus-circled"></i>Products
+		                	</a>
+		                </li>
+					    <li class="nav-item">
+					    	<a ui-sref="myproducts" class="nav-link">
+					    		<i class="ion-plus-circled"></i>My Products
+					    	</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a ui-sref="orders" class="nav-link">
+					    		<i class="ion-card"></i>Orders
+					    	</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a ui-sref="login" class="nav-link">
+					    		<i class="ion-log-in"></i>Login
+					    	</a>
+					    </li>
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+	    		
 
-	    <div ui-view></div>
+	    <div class="wrapper">
+		 	<div ui-view></div>
+	    </div>
+
+	    <li class="nav-item">
+	    	<a ui-sref="result" class="nav-link">
+	    		Result
+	    	</a>
+	    </li>
 
 		<!-- SCRIPTS -->
 
@@ -38,11 +92,13 @@
 		<!-- UI Router Js -->
 		<script type="text/javascript" src="assets/ui-router/release/angular-ui-router.min.js"></script>
 	    <!-- JQuery -->
-	    <script type="text/javascript" src="assets/mdb free/js/jquery.min.js"></script>
+	    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+	    <!-- Tether Js -->
+	    <script type="text/javascript" src="assets/tether/tether.js"></script>
 	    <!-- Bootstrap core JavaScript -->
-	    <script type="text/javascript" src="assets/mdb free/js/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
 	    <!-- Material Design Bootstrap -->
-	    <script type="text/javascript" src="assets/mdb free/js/mdb.js"></script>
+	    <script type="text/javascript" src="assets/ui kit/js/now-ui-kit.js"></script>
 	    <!-- App Js -->
 		<script type="text/javascript" src="js/app.js"></script>
 		<!-- Router Config -->

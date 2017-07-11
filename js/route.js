@@ -1,6 +1,6 @@
 app.config(function($stateProvider, $urlRouterProvider) {
   // For any unmatched url, redirect to /registration
-  $urlRouterProvider.otherwise("/registration");
+  $urlRouterProvider.otherwise("/dashboard");
   // Now set up the states
   $stateProvider
     .state('addproducts', {
