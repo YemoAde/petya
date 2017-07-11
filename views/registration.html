@@ -1,6 +1,8 @@
-<div class="container">
-	<div class="card">
+<div class="cont" style="height: 120vh;background-image: url('/images/lgbg.jpeg');">
+	<div class="">
 		<div class="card-block" align="center">
+
+		<h4 align="center">Register</h4>
 			<form class="form" method="" action="">
 		        <div class="content">
 		            <div class="col-md-6">
@@ -8,31 +10,16 @@
 					        <span class="input-group-addon">
 					            <i class="ion-person"></i>
 					        </span>
-					        <input type="text" class="form-control" placeholder="Firstname">
+					        <input type="text" class="form-control" placeholder="Name">
 					    </div>
 					</div>
-		            <div class="col-md-6">
-					    <div class="input-group form-group-no-border">
-					        <span class="input-group-addon">
-					            <i class="ion-person"></i>
-					        </span>
-					        <input type="text" class="form-control" placeholder="Lastname">
-					    </div>
-					</div>
+		            
 					<div class="col-md-6">
 					    <div class="input-group form-group-no-border">
 					        <span class="input-group-addon">
 					            <i class="ion-locked"></i>
 					        </span>
 					        <input type="password" class="form-control" placeholder="Password">
-					    </div>
-					</div>
-					<div class="col-md-6">
-					    <div class="input-group form-group-no-border">
-					        <span class="input-group-addon">
-					            <i class="ion-locked"></i>
-					        </span>
-					        <input type="password" class="form-control" placeholder="Confirm Password">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -48,7 +35,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-ios-email"></i>
 					        </span>
-					        <input type="email" class="form-control" placeholder="email">
+					        <input type="email" class="form-control" placeholder="Email">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -59,23 +46,21 @@
 					        <input type="text" class="form-control" placeholder="Phone Number">
 					    </div>
 					</div>
-					<div class="radio">
-						<h6>Are you a </h6>
-					    <input type="radio" name="radio1" id="radio1" value="option1" checked="">
-					    <label for="radio1">
-					        Buyer
-					    </label>
-					    <h6>or a</h6>
-					    <input type="radio" name="radio1" id="radio2" value="option2">
-					    <label for="radio2">
-					        Seller
-					    </label>
+					<div class="col-md-6">
+						<label>Please Select Type</label>
+					    <div class="input-group form-group-no-border">
+					        <span class="input-group-addon">
+					            <i class="ion-ios-circle-filled"></i>
+					        </span>
+					        <select class="form-control" value="">
+					        	<option value="" disabled="">Select One</option>
+					        	<option value="Seller" ="">Seller</option>
+					        	<option value="Buyer" ="">Buyer</option>
+					        </select>
+
+					    </div>
+
 					</div>
-		        </div>
-		        <div class="col-sm-4">
-		            <h6>
-		            	<a ui-sref="login" class="link">Login</a>
-		            </h6>
 		        </div>
 		        <div align="center" class="col-sm-4">
 		            <div class="footer text-center">
@@ -84,7 +69,7 @@
 		        </div>
 		        <div class="col-sm-4">
 		            <h6>
-		                <a href="#" class="link">Need Help?</a>
+		                <a ui-sref="login" class="link">LOGIN?</a>
 		            </h6>
 		        </div>
 		    </form>
