@@ -1,0 +1,27 @@
+{
+  "name": "petya",
+  "version": "1.0.1",
+  "description": "hack 4D ",
+  "main": "index.html",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YemoAde/petya.git"
+  },
+  "keywords": [
+    "hack4d",
+    "petya",
+    "farm"
+  ],
+  "author": "Team Petya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YemoAde/petya/issues"
+  },
+  "homepage": "https://github.com/YemoAde/petya#readme",
+  "dependencies": {
+    "angular-chart.js": "^1.1.1"
+  }
+}
