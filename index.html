@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="virtualmarket">
 	<head lang="en">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Virtual Market</title>
@@ -11,11 +11,13 @@
 		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 		<!-- Material Design Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="assets/ui kit/css/now-ui-kit.css">
+
+		<link rel="stylesheet" type="text/css" href="assets/sweetalert/dist/sweetalert.css">
 	    <!-- Style Css -->
 	    <link href="css/style.css" rel="stylesheet">
 
 	</head>
-	<body ng-app="virtualmarket" class="index-page">
+	<body ng-controller="mainController"  class="index-page">
 
 		
 
@@ -44,32 +46,42 @@
 		                		<i class="ion-plus-circled"></i> &nbsp;Products
 		                	</a>
 		                </li>
-		                <li class="nav-item">
+		                <li class="nav-item" ng-show="logged">
 		                	<a ui-sref="addproducts" class="nav-link">
 		                		<i class="ion-search"></i> &nbsp;AGGREGATOR
 		                	</a>
 		                </li>
-		                <li class="nav-item">
+		                <li class="nav-item" ng-show="logged">
 					    	<a ui-sref="checkout" class="nav-link">
 					    		<i class="ion-bag"></i> &nbsp;Cart
 					    	</a>
 					    </li>
-					    <li class="dropdown nav-item">
+					    <li class="dropdown nav-item" ng-show="logged">
 						    <a href="#" class="btn btn-default dropdown-toggle" target="_self" data-toggle="dropdown" id="navbarDropdownMenuLink1">
 						    	<i class="ion-person"></i> &nbsp;My Account
 						    </a>
 						    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-						        <a class="dropdown-item nav-link" href="#"><i class="ion-ios-pricetag"></i> &nbsp;My Products</a>
-						        <a class="dropdown-item nav-link" href="#"><i class="ion-plus"></i> &nbsp;Add Product</a>
-						        <a class="dropdown-item nav-link" href="#"><i class="ion-card"></i> &nbsp;Orders</a>
+						        <a class="dropdown-item nav-link" ui-sref="myproduct"><i class="ion-ios-pricetag"></i> &nbsp;My Products</a>
+						        <a class="dropdown-item nav-link" ui-sref="addProduct"><i class="ion-plus"></i> &nbsp;Add Product</a>
+						        <a class="dropdown-item nav-link" ui-sref="order"><i class="ion-card"></i> &nbsp;Orders</a>
 						        <a class="dropdown-item nav-link" href="#"><i class="ion-cash"></i> &nbsp;Transactions</a>
-						        <a class="dropdown-item nav-link" href="#"><i class="ion-person"></i> &nbsp;Profile</a>
+						        <a class="dropdown-item nav-link" ui-sref="profile"><i class="ion-person"></i> &nbsp;Profile</a>
 						        <div class="dropdown-divider"></div>
 						    </ul>
 						</li>
-					    <li class="nav-item">
+					    <li class="nav-item" ng-hide="logged">
 					    	<a ui-sref="login" class="nav-link">
 					    		<i class="ion-log-in"></i> &nbsp;Login
+					    	</a>
+					    </li>
+					    <li class="nav-item" ng-hide="logged">
+					    	<a ui-sref="register" class="nav-link">
+					    		<i class="ion-log-in"></i> &nbsp;Register
+					    	</a>
+					    </li>
+					    <li class="nav-item" ng-show="logged">
+					    	<a ui-sref="login" class="nav-link" ng-click="logout()">
+					    		<i class="ion-log-in"></i> &nbsp;Logout
 					    	</a>
 					    </li>
 		            </ul>
@@ -87,6 +99,10 @@
 		<script type="text/javascript" src="assets/angular/angular.min.js"></script>
 		<!-- UI Router Js -->
 		<script type="text/javascript" src="assets/ui-router/release/angular-ui-router.min.js"></script>
+
+		<script type="text/javascript" src="assets/sweetalert/dist/sweetalert.min.js"></script>
+		<script type="text/javascript" src="assets/ngSweetAlert/SweetAlert.min.js"></script>
+		<script type="text/javascript" src="assets/ngstorage/ngStorage.min.js"></script>
 	    <!-- JQuery -->
 	    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
 	    <!-- Tether Js -->

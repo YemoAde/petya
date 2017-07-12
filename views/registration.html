@@ -3,14 +3,14 @@
 		<div class="card-block" align="center">
 
 		<h4 align="center">Register</h4>
-			<form class="form" method="" action="">
+			<form class="form" name="regForm" ng-controller="registerController" ng-submit="register(user)">
 		        <div class="content">
 		            <div class="col-md-6">
 					    <div class="input-group form-group-no-border">
 					        <span class="input-group-addon">
 					            <i class="ion-person"></i>
 					        </span>
-					        <input type="text" class="form-control" placeholder="Name">
+					        <input type="text" class="form-control" placeholder="Name" ng-model="user.name">
 					    </div>
 					</div>
 		            
@@ -19,7 +19,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-locked"></i>
 					        </span>
-					        <input type="password" class="form-control" placeholder="Password">
+					        <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -27,7 +27,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-ios-home"></i>
 					        </span>
-					        <input type="text" class="form-control" placeholder="Address">
+					        <input type="text" class="form-control" placeholder="Address" ng-model="user.address">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -35,7 +35,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-ios-email"></i>
 					        </span>
-					        <input type="email" class="form-control" placeholder="Email">
+					        <input type="email" class="form-control" placeholder="Email" ng-model="user.email">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -43,7 +43,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-ios-telephone"></i>
 					        </span>
-					        <input type="text" class="form-control" placeholder="Phone Number">
+					        <input type="text" class="form-control" placeholder="Phone Number" ng-model="user.phone">
 					    </div>
 					</div>
 					<div class="col-md-6">
@@ -52,10 +52,10 @@
 					        <span class="input-group-addon">
 					            <i class="ion-ios-circle-filled"></i>
 					        </span>
-					        <select class="form-control" value="">
+					        <select class="form-control" value="" ng-model="user.type">
 					        	<option value="" disabled="">Select One</option>
-					        	<option value="Seller" ="">Seller</option>
-					        	<option value="Buyer" ="">Buyer</option>
+					        	<option value="2" ="">Seller</option>
+					        	<option value="1" ="">Buyer</option>
 					        </select>
 
 					    </div>
@@ -64,7 +64,7 @@
 		        </div>
 		        <div align="center" class="col-sm-4">
 		            <div class="footer text-center">
-		            	<input type="submit" name="submit" class="btn btn-primary btn-round btn-block">
+		            	<button type="submit" name="submit" ng-disabled="regForm.$invalid" class="btn btn-primary btn-round btn-block">Register</button>
 		        	</div>
 		        </div>
 		        <div class="col-sm-4">

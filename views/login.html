@@ -1,7 +1,7 @@
 <div class="container" style="margin-top: 5%;">
 	<div class="card">
 		<div class="card-block" align="center">
-			<form class="form" method="" action="">
+			<form class="form" name="logForm" ng-submit="login(user)" ng-controller="loginController" novalidate>
 				<h4 align="center">LOGIN</h4>
 		        <div class="content">
 		            <div class="col-md-6">
@@ -9,7 +9,7 @@
 					        <span class="input-group-addon">
 					            <i class="ion-person"></i>
 					        </span>
-					        <input type="text" class="form-control" placeholder="Username">
+					        <input type="email" class="form-control" placeholder="Username" ng-model="user.email" required>
 					    </div>
 					</div>
 		            <div class="col-md-6">
@@ -17,14 +17,14 @@
 					        <span class="input-group-addon">
 					            <i class="ion-locked"></i>
 					        </span>
-					        <input type="password" class="form-control" placeholder="Password">
+					        <input type="password" class="form-control" placeholder="Password" ng-model="user.password" required>
 					    </div>
 					</div>
 		        </div>
 		        
 		        <div align="center" class="col-md-4">
 		            <div class="footer text-center">
-		            	<input type="submit" name="Login" class="btn btn-primary btn-round btn-block">
+		            	<button type="submit" class="btn btn-primary btn-round btn-block" ng-disabled="logForm.$invalid">Login</button>
 		        	</div>
 		        </div>
 		        <div class="col-md-4">

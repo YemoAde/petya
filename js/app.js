@@ -1,1 +1,1 @@
-var app = angular.module('virtualmarket', ['ui.router']);
+var app = angular.module('virtualmarket', ['ui.router', 'ngStorage', 'oitozero.ngSweetAlert']);
