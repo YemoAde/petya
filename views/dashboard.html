@@ -1,47 +1,144 @@
-<div style="height: 75vh;background-image: url('/images/lgbg.jpeg');background-repeat: no-repeat;background-position: center;" >
+<div style="height: 75vh;background-image: url('/images/bg.jpeg');background-repeat: no-repeat;background-position: center;" >
 	<div>
-		<div >
-			<div class="">
+		<div>
+			<div>
 			    <div class="input-group form-group-no-border" style="padding-top: 10%; padding-right: 2%;padding-left: 2%;">
 			        <span class="input-group-addon">
 			            <i class="ion-search"></i>
 			        </span>
-			        <input type="text" class="form-control" placeholder="Search" style="background-color: rgba(0,0,0,0.7) !important;color: white;text-align: center;">
+			        <input type="text" class="form-control" placeholder="Search" style="background-color: rgba(0,0,0,0.7) !important;color: white;text-align: center;" ng-model="query">
 			    </div>
 			    <div align="center">
-			    	<button class="btn btn-primary btn-lg"><i class="ion-search"></i></button>
+			    	<button ng-click="search(query)" class="btn btn-primary btn-lg"><i class="ion-search"></i></button>
 			    </div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="container" style="margin-top: 1%;">
-	<div ng-controller="LineCtrl" class="card col-md-5">
+<div class="container row" style="margin-top: 1%; margin-left: 10%;">
+	<div ng-controller="LineCtrl" class="card col-md-5" style="margin-top: 3%;">
 		<canvas id="line" class="chart chart-line" chart-data="data"
 		chart-labels="labels" chart-series="series" chart-options="options"
 		chart-dataset-override="datasetOverride" chart-click="onClick">
 		</canvas>
 	</div>
-	<div ng-controller="LineCtrl" class="card col-md-5" style="margin-left: 4%;">
-		<canvas id="line" class="chart chart-line" chart-data="data"
-		chart-labels="labels" chart-series="series" chart-options="options"
-		chart-dataset-override="datasetOverride" chart-click="onClick">
-		</canvas>
+	<div class="col-md-6" style="margin-left: 2%;">
+		<h6 align="center">International Agricultural Trade Market</h6>
+		<ul class="list-group">
+			<li href="#" class="list-group-item list-group-item-action list-group-item-default row hidden-sm-down">
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<p>Item</p>
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<p>Start</p>
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<p>Close</p>
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<p>&nbsp;</p>
+	  		</div>
+		  </li>
+		  <li href="#" class="list-group-item list-group-item-action list-group-item-success row">
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-leaf"></i> Cocoa
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-up-c"></i> $22.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-up-c"></i> $22.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-plus-round"></i> 0.30%
+	  		</div>
+		  </li>
+		  <li href="#" class="list-group-item list-group-item-action list-group-item-info row">
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-waterdrop"></i> Oil Palm
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-up-c"></i> $50.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-up-c"></i> $51.09
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-plus-round"></i> 0.10%
+	  		</div>
+		  </li>
+		  <li href="#" class="list-group-item list-group-item-action list-group-item-warning row">
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-leaf"></i> Yam
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-up-c"></i> $14.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-down-c"></i> $9.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-minus"></i> 0.59%
+	  		</div>
+		  </li>
+		  <li href="#" class="list-group-item list-group-item-action list-group-item-danger row">
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-egg"></i> Groundnut
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-down-c"></i> $14.00
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-arrow-down-c"></i> $13.40
+	  		</div>
+	  		<div class="col-md-3 col-sm-3 col-xs-3">
+	  			<i class="ion-minus"></i> 0.59%
+	  		</div>
+		  </li>
+		</ul>
+	</div>
+</div>
+
+<div style="padding-top: 2%;padding-left: 5%;" ng-show="query != ''">
+	<div class="">
+		<h5>Search Results For {{query}}</h5>
+		<div class="card mb-3 col-md-3" style="margin: 2%;" ng-repeat="product in result">
+		  <img class="" src="http://localhost/petya/v1/{{product.product_image}}" alt="Card image cap" style="height: 250px;margin-top: 5px;">
+		  <div class="card-block">
+		    <h4 class="card-title">{{product.product_name}}</h4>
+		    <h6 class="card-title">{{product.product_price | currency}}</h6>
+		    <p class="card-text"><small class="text-muted">Sold by <strong>{{product.name}}</strong></small></p>
+		    <div>
+		    	<button type="button" ng-click="move(1)" class="btn btn-neutral"><i class="ion-eye"></i> View</button>
+		    	<button type="button" ng-click="addToCart(product)" class="btn btn-neutral"><i class="ion-bag"></i> Add to Cart</button>
+		    </div>
+		  </div>
+		</div>
+		<div class="card mb-3 col-md-3" style="margin: 2%;" ng-if="!result">
+		  <img class="" src="/images/bg.jpeg" alt="Card image cap" style="height: 250px;margin-top: 5px;">
+		  <div class="card-block">
+		    <h4 class="card-title">No Match Found</h4>
+		    <h6 class="card-title"></h6>
+		    <p class="card-text"><small class="text-muted"></small></p>
+		  </div>
+		</div>
+		<button ng-click="query = ''"" class="btn btn-neutral">Close Search</button>
 	</div>
 </div>
 
 
-<div style="padding-top: 2%;padding-left: 5%;">
+
+<div style="padding-top: 2%;padding-left: 5%;" ng-controller="productController">
 	<div class="">
-		<div class="card mb-3 col-md-3" style="margin: 2%;">
-		  <img class="" src="/images/cocoa.jpg" alt="Card image cap" style="height: 250px;margin-top: 5px;">
+		<div class="card mb-3 col-md-3" style="margin: 2%;" ng-repeat="product in allProducts">
+		  <img class="" src="http://localhost/petya/v1/{{product.product_image}}" alt="Card image cap" style="height: 250px;margin-top: 5px;">
 		  <div class="card-block">
-		    <h4 class="card-title">Cocoa Puds</h4>
-		    <h6 class="card-title">{{'2000' | currency}}</h6>
-		    <p class="card-text"><small class="text-muted">Sold by Petya Farms</small></p>
+		    <h4 class="card-title">{{product.product_name}}</h4>
+		    <h6 class="card-title">{{product.product_price | currency}}</h6>
+		    <p class="card-text"><small class="text-muted">Sold by <strong>{{product.name}}</strong></small></p>
 		    <div>
-		    	<button class="btn btn-neutral"><i class="ion-eye"></i> View</button>
-		    	<button class="btn btn-neutral"><i class="ion-bag"></i> Add to Cart</button>
+		    	<button type="button" ng-click="move(1)" class="btn btn-neutral"><i class="ion-eye"></i> View</button>
+		    	<button type="button" ng-click="addToCart(product)" class="btn btn-neutral"><i class="ion-bag"></i> Add to Cart</button>
 		    </div>
 		  </div>
 		</div>
@@ -52,7 +149,7 @@
 		    <h6 class="card-title">{{'2000' | currency}}</h6>
 		    <p class="card-text"><small class="text-muted">Sold by Petya Farms</small></p>
 		    <div>
-		    	<button class="btn btn-neutral"><i class="ion-eye"></i> View</button>
+		    	<button ng-click="$location.path('#/single/1')" class="btn btn-neutral"><i class="ion-eye"></i> View</button>
 		    	<button class="btn btn-neutral"><i class="ion-bag"></i> Add to Cart</button>
 		    </div>
 		  </div>

@@ -18,7 +18,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     .state('myproduct', {
       url: "/myproduct",
-      templateUrl: "views/myproducts.html"
+      templateUrl: "views/myproducts.html",
+      controller: 'sellerController'
     })
 
     .state('order', {
@@ -37,8 +38,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
     })
 
     .state('single', {
-      url: "/single",
-      templateUrl: "views/single.html"
+      url: "/single/{ID}",
+      templateUrl: "views/single.html",
+      controller: 'productController'
     })
 
     .state('addproducts', {

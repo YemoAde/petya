@@ -61,10 +61,10 @@
 						    	<i class="ion-person"></i> &nbsp;My Account
 						    </a>
 						    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
-						        <a class="dropdown-item nav-link" ui-sref="myproduct"><i class="ion-ios-pricetag"></i> &nbsp;My Products</a>
-						        <a class="dropdown-item nav-link" ui-sref="addProduct"><i class="ion-plus"></i> &nbsp;Add Product</a>
-						        <a class="dropdown-item nav-link" ui-sref="order"><i class="ion-card"></i> &nbsp;Orders</a>
-						        <a class="dropdown-item nav-link" href="#"><i class="ion-cash"></i> &nbsp;Transactions</a>
+						        <a class="dropdown-item nav-link" ui-sref="myproduct" ng-hide="buyer"><i class="ion-ios-pricetag"></i> &nbsp;My Products</a>
+						        <a class="dropdown-item nav-link" ui-sref="addProduct" ng-hide="buyer"><i class="ion-plus"></i> &nbsp;Add Product</a>
+						        <a class="dropdown-item nav-link" ui-sref="order" ng-hide="buyer"><i class="ion-card"></i> &nbsp;Orders</a>
+						        <a class="dropdown-item nav-link" href="#" ng-show="buyer"><i class="ion-cash"></i> &nbsp;Transactions</a>
 						        <a class="dropdown-item nav-link" ui-sref="profile"><i class="ion-person"></i> &nbsp;Profile</a>
 						        <div class="dropdown-divider"></div>
 						    </ul>

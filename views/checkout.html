@@ -1,3 +1,27 @@
-<div>
-	<h1>CHECKOUT HTML</h1>
+<div style="background-image: url('/images/bg.jpeg'); height: 20vh;">
+	<h1 align="center" class="text-white">Cart/Checkout</h1>
+</div>
+<div style="padding-top: 2%;padding-left: 5%;" ng-controller="cartController">
+	<div class="">
+		<div class="card mb-3 col-md-3" style="margin: 2%;" ng-repeat="car in cart">
+		  <img src="http://localhost/petya/v1/{{car.product_image}}" alt="Card image cap" style="height: 250px;margin-top: 5px;">
+		  <div class="card-block">
+		    <h4 class="card-title">{{car.product_name}}</h4>
+		    <h6 class="card-title">{{car.product_price | currency}}</h6>
+		    <p class="card-text"><small class="text-muted">Sold by {{car.name}}</small></p>
+		    <div>
+		    	<button type="button" ng-click="remove(car)" class="btn btn-neutral"><i class="ion-trash-a"></i> Remove</button>
+		    </div>
+		  </div>
+		</div>
+		<div class="card mb-3 col-md-3" style="margin: 2%;" ng-if="!(cart.length > 0)">
+		  <img class="" src="/images/bg.jpeg" alt="Card image cap" style="height: 250px;margin-top: 5px;">
+		  <div class="card-block">
+		    <h4 class="card-title">No item in Cart</h4>
+		    <h6 class="card-title"></h6>
+		    <p class="card-text"><small class="text-muted"></small></p>
+		  </div>
+		</div>
+		<button type="button" class="btn btn-lg btn-danger">Checkout</button>
+	</div>
 </div>

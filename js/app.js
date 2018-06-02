@@ -30,3 +30,61 @@ app.controller("LineCtrl", function ($scope) {
     }
   };
 });
+
+app.directive('fdInput', [function () {
+    return {
+        link: function (scope, element, attrs) {
+            element.on('change', function  (evt) {
+                var files = evt.target.files;
+                console.log(files[0].name);
+                console.log(files[0].size);
+            });
+        }
+    }
+}]);
+app.directive('fileModel', ['$parse', function ($parse) {
+    return {
+    restrict: 'A',
+    link: function(scope, element, attrs) {
+        var model = $parse(attrs.fileModel);
+        var modelSetter = model.assign;
+
+        element.bind('change', function(){
+            scope.$apply(function(){
+                modelSetter(scope, element[0].files[0]);
+            });
+        });
+    }
+   };
+}])
+
+app.service('fileUpload', ['$http', 'SweetAlert', '$localStorage', function ($http, SweetAlert, $localStorage) {
+
+    this.uploadFileToUrl = function(image, uploadUrl, pack){
+         var fd = new FormData();
+         fd.append('image', image);
+         fd.append('product_name', pack.product_name);
+         fd.append('product_details', pack.product_details);
+         fd.append('product_price', pack.product_price);
+         fd.append('unit_of_measure', pack.unit_of_measure);
+         fd.append('quantity', pack.quantity);
+         fd.append('status', pack.status);
+         fd.append('category_id', pack.category);
+         fd.append('seller', $localStorage.user[0]._id);
+
+         $http.post(uploadUrl, fd, {
+             transformRequest: angular.identity,
+             headers: {'Content-Type': undefined}
+         })
+         .then(function(response){
+         	if (response.data.status == "success"){
+         		SweetAlert.swal("Success!", "Select a File", "success");
+         	}
+         	else{
+         		SweetAlert.swal("Error!", "Failed", "error");
+         	}
+         },function(error){
+         		SweetAlert.swal("Error!", "Check Network", "error");
+         });
+     }
+ }])
